@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>greeeting card</title>
+        <style>
+            #d1{float: left;margin-left: 150px; background-image: url("images/s1.png");background-repeat: no no-repeat;}
+            #d2{float:right;margin-right: 150px; background-image:url("images/s3.png");background-repeat: no no-repeat;}
+            .d{height: 600px;width: 500px;border: 5px solid grey;margin:50px;}
+            body{background-image:url("images/s2.png");}
+            #form1{margin-top: 80px;}
+           h1,h2,h3,h4{ font-family: Lucida Sans;color: green;}
+        </style>
+        <script>
+            function change(){
+            document.getElementById("name").innerHTML=document.getElementById("f1").value;
+            document.getElementById("para1").innerHTML=document.getElementById("f2").value;
+            document.getElementById("from").innerHTML=document.getElementById("f3").value;
+            }
+            function font1(){
+                document.getElementsByClassName("font").style.color="red";
+            }
+            function font2(){
+                document.getElementsByClassName("font").style.color="pink";
+            }
+            function font3(){
+                document.getElementsByClassName("font").style.color="blue";
+            }
+        </script>
+    </head>
+    <body>
+        <div height="1000px" width="1200px">
+            <div class="d" id="d1" >
+                <center><form id="form1">
+                    <label for="name">NAME</label><br>
+                    <input type="text" id="f1" onkeyup="change()"><br>
+                    <label for="para1">PARAGRAPH</label><br>
+                    <textarea id="f2" onkeyup="change()"></textarea><br>
+                    <label for="from:">from:</label><br>
+                    <input type="text" id="f3" onkeyup="change()"><br>
+                    <label>SELECT</label>
+                    <input type="radio" name="rb" text="Lucid Sans" onselect="font1()">
+                    <input type="radio" name="rb" text="monospace" onselect="font2()">
+                    <input type="radio" name="rb" text="COURIER NEW" onselect="font3()">
+                </form>
+                </center>
+            </div>
+            <div class="d" id="d2">
+                <center><h1 class="font">PROPOSAL FOR YOU</h1><br>
+                <h2 id="name" class="font"></h2>
+                <h2 id="para1" class="font"></h2>
+                <br><br><br>
+                <h4 class="font">From-</h4>
+                <h3 id="from" class="font"></h3>
+            </center>
+            
+            </div>
+        </div>
+    </body>
+</html>
